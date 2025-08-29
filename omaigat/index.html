@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>selamat menua</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6a88, #ff99ac);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      animation: bounce 2s infinite;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: #fff;
+      margin-top: -10px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -200px;
+      animation: float 12s infinite linear;
+    }
+
+    /* ⬇️ Perubahan di sini */
+    .balloon img {
+      width: 140px;
+      height: auto;
+      display: block;             /* hilangkan “inline gap” */
+      background: transparent;    /* pastikan transparan */
+      /* hapus box-shadow: */
+      /* box-shadow: 0px 5px 15px rgba(0,0,0,0.3); */
+      /* ganti dengan drop-shadow yang mengikuti bentuk PNG transparan */
+      filter: drop-shadow(0px 6px 14px rgba(0,0,0,0.35));
+      pointer-events: none;       /* biar cursor nggak “nabrak” gambar */
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+      80%  { opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+    }
+
+    .watermark {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      font-size: 14px;
+      color: rgba(225, 225, 225, 0.6);
+      font-family: 'Courier New', monospace;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 happy birthday 🎉</h1>
+  <h2>selamat menua🥳🥳🥳</h2>
+
+  <!-- Gambar kucing melayang -->
+  <div class="balloon" style="left:15%; animation-delay: 0s;">
+    <img src="pict/_-removebg-preview.png" alt="">
+  </div>
+  <div class="balloon" style="left:35%; animation-delay: 3s;">
+    <img src="pict/trop_mignon-removebg-preview.png" alt="kucing 2">
+  </div>
+  <div class="balloon" style="left:55%; animation-delay: 6s;">
+    <img src="pict/Cat-removebg-preview.png" alt="kucing 3">
+  </div>
+  <div class="balloon" style="left:75%; animation-delay: 9s;">
+    <img src="pict/ALAMAK-removebg-preview.png" alt="kucing 4">
+  </div>
+
+  <div class="watermark">reno asli</div>
+</body>
+</html>
